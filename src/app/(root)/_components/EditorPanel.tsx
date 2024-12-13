@@ -28,6 +28,8 @@ const EditorPanel = () => {
     if (savedFontSize) setFontSize(parseInt(savedFontSize));
   }, [setFontSize]);
 
+  console.log(isShareDialogOpen);
+
   const handleRefresh = () => {
     const defaultCode = LANGUAGE_CONFIG[language].defaultCode;
     if (editor) editor.setValue(defaultCode);
