@@ -1,28 +1,28 @@
-"use client"
+"use client";
 
-import { SignedOut, SignInButton } from "@clerk/clerk-react"
-import { UserButton } from "@clerk/nextjs"
-import { User } from "lucide-react"
+import LoginButton from "@/components/LoginButton";
+import { SignedOut } from "@clerk/clerk-react";
+import { UserButton } from "@clerk/nextjs";
+import { User } from "lucide-react";
 
 const HeaderProfileBtn = () => {
   return (
     <>
-    <UserButton>
-      <UserButton.MenuItems>
-        <UserButton.Link
-          label="Profile"
-          labelIcon={<User className="size-4" />}
-          href="/profile"
-        />
-      </UserButton.MenuItems>
-    </UserButton>
+      <UserButton>
+        <UserButton.MenuItems>
+          <UserButton.Link
+            label="Profile"
+            labelIcon={<User className="size-4" />}
+            href="/profile"
+          />
+        </UserButton.MenuItems>
+      </UserButton>
 
-    <SignedOut>
-      {/* <LoginButton /> */}
-      <SignInButton />
-    </SignedOut>
-  </>
-  )
-}
+      <SignedOut>
+        <LoginButton />
+      </SignedOut>
+    </>
+  );
+};
 
-export default HeaderProfileBtn
+export default HeaderProfileBtn;
